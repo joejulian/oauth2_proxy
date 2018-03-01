@@ -2,6 +2,13 @@
 # Official docker image.
 image: docker:latest
 
+variables:
+  FAILFASTCI_NAMESPACE: jj-ff
+
+stages:
+  - test
+  - build
+
 services:
   - docker:dind
 
